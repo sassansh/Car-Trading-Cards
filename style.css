@@ -136,7 +136,7 @@ label {
   position: absolute;
   font-size: calc(8px + 0.5vw);
 }
-@media screen and (max-width: 992px) {
+@media (max-width: 992px) {
   .cards {
     justify-content: center;
   }
@@ -144,13 +144,13 @@ label {
     margin: 15px;
     width: 44%;
   }
+
+  .header {
+    font-size: 3.5vw;
+  }
 }
 
-@media screen and (max-width: 600px) {
-  .cards {
-    justify-content: center;
-  }
-
+@media (max-width: 600px) {
   .card {
     margin: 10px;
     width: 100%;
