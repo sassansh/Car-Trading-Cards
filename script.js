@@ -1,7 +1,6 @@
 // Stringified JSON object that holds initial cards
 let cars =
-  '[{ "carName":"Tesla Model 3", "imageURL":"https://bit.ly/3w4C41Q", "price":"$65,000"},{ "carName":"Jeep Wrangler", "imageURL":"https://bit.ly/3wfgjN6", "price":"$65,000"},{ "carName":"Tesla Model Y", "imageURL":"https://bit.ly/3wapfTJ", "price":"$65,000"},{ "carName":"Tesla Model X", "imageURL":"https://bit.ly/3uWMnVB", "price":"$130,000"}]';
-
+  '[{"carName":"Tesla Model 3","imageURL":"https://bit.ly/3w4C41Q","price":"$65,000"},{"carName":"Jeep Rubicon","imageURL":"https://bit.ly/3wfgjN6","price":"$70,000"},{"carName":"Tesla Model X","imageURL":"https://bit.ly/3uWMnVB","price":"$130,000"},{"carName":"Audi R8","imageURL":"https://bit.ly/34dKatb","price":"$170,000"}]';
 // Parse the stringy JSON
 let cards = JSON.parse(cars);
 
