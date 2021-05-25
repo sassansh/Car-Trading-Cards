@@ -52,7 +52,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+![Car Trading Cards Screen Shot][product-screenshot]
 
 This project is being worked on as part of a UBC computer science course (CPSC 455).
 
