@@ -20,7 +20,7 @@
     Pure HTML, CSS, JS to develop a car trading card website.
     <br />
     <br />
-    <a href="https://github.com/sassansh/Car-Trading-Cards">View Demo</a>
+    <a href="https://sassanshokoohi.ca/Car-Trading-Cards/">View Demo</a>
   </p>
 </p>
 
