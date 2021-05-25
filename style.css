@@ -127,6 +127,10 @@ label {
   cursor: pointer;
 }
 
+.active-control {
+  background-color: #8f7c55;
+}
+
 .deleteCard {
   background-color: #c7b082;
   color: white;

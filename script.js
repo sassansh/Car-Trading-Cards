@@ -100,6 +100,8 @@ function clearForm() {
 function sortByName() {
   sortBy = "Name";
   cards.sort((a, b) => (a.carName.toLowerCase() > b.carName.toLowerCase() ? 1 : -1));
+  document.getElementById("sortbyprice").classList.remove("active-control");
+  document.getElementById("sortbyname").classList.add("active-control");
   renderCards();
 }
 
@@ -107,6 +109,8 @@ function sortByName() {
 function sortByPrice() {
   sortBy = "Price";
   cards.sort((a, b) => (parseInt(a.price) > parseInt(b.price) ? 1 : -1));
+  document.getElementById("sortbyname").classList.remove("active-control");
+  document.getElementById("sortbyprice").classList.add("active-control");
   renderCards();
 }
 
