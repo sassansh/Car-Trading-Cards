@@ -40,15 +40,15 @@
         <!-- Car Image URL -->
         <div class="row">
           <label>Car Image URL</label>
-          <input type="text" id="imgurl" placeholder="Enter URL to car image" />
+          <input type="url" id="imgurl" placeholder="Enter URL to car image" />
         </div>
         <!-- Car Price -->
         <div class="row">
           <label>Car Price</label>
           <input
-            type="text"
+            type="number"
             id="price"
-            placeholder="Enter car price (e.g. $50,000)"
+            placeholder="Enter car price (e.g. 50000)"
           />
         </div>
         <!-- Buttons -->
@@ -64,8 +64,14 @@
     </div>
 
     <!-- Cards Section -->
-    <button onclick="deleteAllCards()" class="delete">
+    <button onclick="deleteAllCards()" class="controls">
       🗑 Delete All Cards
+    </button>
+    <button onclick="sortByPrice()" class="controls">
+      💰 Sort by Price
+    </button>
+    <button onclick="sortByName()" class="controls">
+      🔤 Sort by Name
     </button>
     <div id="cards" class="cards"></div>
 

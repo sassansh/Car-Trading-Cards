@@ -1,6 +1,8 @@
+let sortBy = "None";
+
 // Stringified JSON object that holds initial cards
 let cars =
-  '[{"carName":"Tesla Model 3","imageURL":"https://bit.ly/3w4C41Q","price":"$65,000"},{"carName":"Jeep Rubicon","imageURL":"https://bit.ly/3wfgjN6","price":"$70,000"},{"carName":"Tesla Model X","imageURL":"https://bit.ly/3uWMnVB","price":"$130,000"},{"carName":"Audi R8","imageURL":"https://bit.ly/34dKatb","price":"$170,000"}]';
+  '[{"carName":"Tesla Model X","imageURL":"https://bit.ly/3uWMnVB","price":"130000"},{"carName":"Jeep Rubicon","imageURL":"https://bit.ly/3wfgjN6","price":"70000"},{"carName":"Tesla Model 3","imageURL":"https://bit.ly/3w4C41Q","price":"65000"},{"carName":"Audi R8","imageURL":"https://bit.ly/34dKatb","price":"170000"}]';
 // Parse the stringy JSON
 let cards = JSON.parse(cars);
 
@@ -18,10 +20,10 @@ function renderCards() {
       const newCardHTML = `
           <div class="card">
             <button onClick="deleteOneCard(${index})"class="deleteCard">✖️ Delete</button>
-            <img src="${result.imageURL}" alt="T${result.carName}" style="width: 100%" />
+            <img src="${result.imageURL}" alt="${result.carName}" style="width: 100%" />
             <div class="card_container">
               <h4><b>${result.carName}</b></h4>
-              <p>${result.price}</p>
+              <p>$${Number(result.price).toLocaleString()}</p>
             </div>
           </div>
       `;
@@ -64,18 +66,20 @@ function addCar() {
       document.getElementById("imgurl").value.startsWith("https://") ||
       document.getElementById("imgurl").value.startsWith("http://")
     ) {
-      // Check if Price is valid
-      if (document.getElementById("price").value.startsWith("$")) {
-        // Add car object to array
-        cards.push({
-          carName: document.getElementById("carname").value,
-          imageURL: document.getElementById("imgurl").value,
-          price: document.getElementById("price").value,
-        });
-        clearForm();
-        renderCards();
+      // Add car object to array
+      cards.push({
+        carName: document.getElementById("carname").value,
+        imageURL: document.getElementById("imgurl").value,
+        price: document.getElementById("price").value,
+      });
+      clearForm();
+      // Sort Cards
+      if (sortBy == "Price") {
+        sortByPrice();
+      } else if (sortBy == "Name") {
+        sortByName();
       } else {
-        alert("Please enter a valid Price (e.g. $50,000)");
+        renderCards();
       }
     } else {
       alert("Please enter a valid Image URL!");
@@ -90,6 +94,20 @@ function clearForm() {
   document.getElementById("carname").value = "";
   document.getElementById("imgurl").value = "";
   document.getElementById("price").value = "";
+}
+
+// Sort cards by car name
+function sortByName() {
+  sortBy = "Name";
+  cards.sort((a, b) => (a.carName.toLowerCase() > b.carName.toLowerCase() ? 1 : -1));
+  renderCards();
+}
+
+// Sort cards by price
+function sortByPrice() {
+  sortBy = "Price";
+  cards.sort((a, b) => (parseInt(a.price) > parseInt(b.price) ? 1 : -1));
+  renderCards();
 }
 
 renderCards();
