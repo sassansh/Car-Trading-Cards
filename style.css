@@ -1,0 +1,171 @@
+* {
+  font-family: Verdana, sans-serif;
+}
+
+body {
+  color: #131313;
+}
+
+.header {
+  padding: 10px;
+  text-align: center;
+  background: #638172;
+  color: white;
+  font-size: 30px;
+}
+
+.aboutme {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 24px;
+}
+
+.aboutproject {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 24px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #393337;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #222022;
+  color: white;
+}
+
+.active {
+  background-color: #776a52;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  margin: 10px;
+  width: 22%;
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+}
+
+.card_container {
+  padding: 2px 16px;
+}
+
+input {
+  width: 100%;
+  padding: 13px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+label {
+  margin: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.form_container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.formbuttons {
+  background-color: #c7b082;
+  color: white;
+  padding: 12px 20px;
+  margin-top: 8px;
+  margin-left: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+.controls {
+  background-color: #c7b082;
+  color: white;
+  padding: 12px 20px;
+  margin-top: 8px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.active-control {
+  background-color: #8f7c55;
+}
+
+.deleteCard {
+  background-color: #c7b082;
+  color: white;
+  padding: calc(4px + 0.1vw) calc(4px + 0.2vw);
+  border: none;
+  border-radius: 5px 0 5px 0;
+  cursor: pointer;
+  position: absolute;
+  font-size: calc(8px + 0.5vw);
+}
+@media (max-width: 992px) {
+  .cards {
+    justify-content: center;
+  }
+  .card {
+    margin: 15px;
+    width: 44%;
+  }
+
+  .header {
+    font-size: 3.5vw;
+  }
+
+  .controls {
+    width: 29%;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    margin: 10px;
+    width: 100%;
+  }
+
+  .controls {
+    width: 100%;
+  }
+}

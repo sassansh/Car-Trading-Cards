@@ -20,7 +20,7 @@
     Pure HTML, CSS, JS to develop a car trading card website.
     <br />
     <br />
-    <a href="https://github.com/sassansh/Car-Trading-Cards">View Demo</a>
+    <a href="https://sassanshokoohi.ca/Car-Trading-Cards/">View Demo</a>
   </p>
 </p>
 
@@ -52,7 +52,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+![Car Trading Cards Screen Shot][product-screenshot]
 
 This project is being worked on as part of a UBC computer science course (CPSC 455).
 

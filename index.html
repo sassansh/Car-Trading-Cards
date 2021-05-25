@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Car Trading Cards - Homepage</title>
+    <meta
+      name="description"
+      content="Pure HTML, CSS, JS to develop a car trading card website."
+    />
+    <meta name="author" content="Sassan Shokoohi" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="https://bit.ly/2RAUpoV" />
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <div class="header">
+      <h1>Car Trading Cards 🚘</h1>
+    </div>
+
+    <!-- Navbar Section -->
+    <div class="navbar">
+      <a class="active" href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+    </div>
+
+    <!-- Form Section -->
+    <div class="form_container">
+      <form>
+        <!-- Car Name -->
+        <div class="row">
+          <label>Car Name</label>
+
+          <input type="text" id="carname" placeholder="Enter car name" />
+        </div>
+        <!-- Car Image URL -->
+        <div class="row">
+          <label>Car Image URL</label>
+          <input type="url" id="imgurl" placeholder="Enter URL to car image" />
+        </div>
+        <!-- Car Price -->
+        <div class="row">
+          <label>Car Price</label>
+          <input
+            type="number"
+            id="price"
+            placeholder="Enter car price (e.g. 50000)"
+          />
+        </div>
+        <!-- Buttons -->
+        <div class="row">
+          <button onclick="clearForm()" class="formbuttons" type="button">
+            ➖ Clear Form
+          </button>
+          <button onclick="addCar()" class="formbuttons" type="button">
+            ➕ Add Car
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Cards Section -->
+    <button onclick="deleteAllCards()" class="controls">
+      🗑 Delete All Cards
+    </button>
+    <button onclick="sortByPrice()" id="sortbyprice" class="controls">
+      💰 Sort by Price
+    </button>
+    <button onclick="sortByName()" id="sortbyname" class="controls">
+      🔤 Sort by Name
+    </button>
+    <div id="cards" class="cards"></div>
+
+    <!-- Test Zone -->
+
+    <!-- Script Import -->
+    <script src="script.js"></script>
+  </body>
+</html>
